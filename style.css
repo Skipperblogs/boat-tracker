@@ -1,5 +1,5 @@
 form {
-  margin-top: 4em;
+  margin-top: 20px;
 }
 
 .container {
@@ -79,4 +79,19 @@ code {
 }
 input{
   line-height: 1!important;
+}
+#settings{
+  display: flex;
+  flex-direction: row;
+}
+#settings .form, #settings .instructions{
+  width: 50%;
+}
+@media screen and (max-width: 990px) {
+  #settings{
+    flex-direction: column;
+  }
+  #settings .form, #settings .instructions{
+    width: 100%;
+  }
 }

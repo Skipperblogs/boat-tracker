@@ -30,7 +30,7 @@ Simply display the **map** with:
 
 Personalize its dimensions:
 
-`[tracking-map height="300" width="100%"]`
+`[live-map height="300" width="100%"]`
 
 = More =
 

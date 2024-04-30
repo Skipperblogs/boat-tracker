@@ -76,11 +76,6 @@ class BOAT_TRACKING_Plugin_Settings
                 'type' => 'text',
                 'helptext' => __('You can retreive your Map ID from https://www.skipperblogs.com/dashboard/nav/map/share?source=wp', 'boat-tracking')
             ),
-            'shortcode_in_excerpt' => array(
-                'display_name' => __('Show maps in excerpts', 'leaflet-map'),
-                'default' => '0',
-                'type' => 'checkbox',
-            ),
 
         );
 

@@ -22,7 +22,7 @@ Add a live map generated with [Skipperblogs](https://www.skipperblogs.com/) for 
 ## General Usage
 
 ```
-[tracking-map]
+[live-map]
 ```
 
 The above shortcode will produce a map centered on the last position of your boat.
@@ -30,7 +30,7 @@ The above shortcode will produce a map centered on the last position of your boa
 To customize the map dimension add the following attributes to the short code 
 
 ```
-[tracking-map heigth="300" width="100%"]
+[live-map heigth="300" width="100%"]
 ```
 
 ## Setting up your account and trackings

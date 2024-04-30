@@ -68,7 +68,7 @@ class Boat_Tracking
 
 
 
-        add_shortcode('tracking-map','mapShortCode');
+        add_shortcode('live-map','mapShortCode');
     }
 
     /**
@@ -90,10 +90,10 @@ class Boat_Tracking
 
         $settings = self::settings();
 
-        if ($settings->get('shortcode_in_excerpt')) {
-            // allows maps in excerpts
-            add_filter('the_excerpt', 'do_shortcode');
-        }
+        //if ($settings->get('shortcode_in_excerpt')) {
+        //    // allows maps in excerpts
+        //    add_filter('the_excerpt', 'do_shortcode');
+       // }
     }
 
     /**

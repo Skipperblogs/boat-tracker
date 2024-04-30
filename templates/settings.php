@@ -76,83 +76,87 @@ if (isset($_POST['submit']) && verify_nonce() && check_admin_referer(NONCE_ACTIO
 <p><?php echo esc_html($description); ?></p>
 <h3>Found an issue?</h3>
 <p>Send an email to<b>: <a href="mailto:support@skipperblogs.com" target="_blank">support@skipperblogs.com</a></p>
-    <div class="card">
-        <h2 class="title">1. Create your Skipperblogs account</h2>
-        <p>
-            This plugins work in combination with an active Skipperblogs account. If you don't have one, register here <a href="https://www.skipperblogs.com/register?source=wp" target="_blank">https://www.skipperblogs.com/register</a>
-        </p>
-    </div>
-    <div class="card">
-        <h2 class="title">2. Initialize navigation and trackings</h2>
-        <p>
-            Once registered, you will need to <a href="https://www.skipperblogs.com/dashboard/map-editor?source=wp" target="_blank">initalize the navigation </a> and <a target="_blank" href="https://www.skipperblogs.com/dashboard/nav/tracking?source=wp">enable some trackings</a>.         </p>
-    </div>
-    <div class="card">
-        <h2 class="title">3. Add the shortcode on your Wordpress site</h2>
-        <p>
-            Copy our Map ID from the Skipperblogs' dashboard <a href="https://www.skipperblogs.com/dashboard/nav/map/share?source=wp" target="_blank">map share settings</a> in the plugin configuration below.<br>
-            Add the following shortcode in your Wordpress content where you want to display the map. <br>
-            <code>[tracking-map]</code>
-        </p>
-    </div>
-    <div class="card">
-        <h2 class="title">4. Map customization</h2>
-        <p>
-            Customize the map background, boat icon, track color and style directly from your Skipperblogs account in the  <a href="https://www.skipperblogs.com/dashboard/map-editor?source=wp" target="_blank">map editor</a>
-        </p>
-        <p>
-            To change the map dimension on Wordpress, use the following shortcode parameters<br>
-            <code>[tracking-map height="250" width="100%"]</code>
-        </p>
-    </div>
-<div class="wrap">
-    <form method="post">
-        <div class="settings">
-        <?php wp_nonce_field(NONCE_ACTION, NONCE_NAME); ?>
-        <div class="container">
-            <h2>Settings</h2>
-            <hr>
-        </div>
-    <?php
-    foreach ($settings->options as $name => $option) {
-        if (!$option->type) continue;
-    ?>
     <div class="container">
-        <label>
-            <span class="label"><?php echo esc_html($option->display_name); ?></span>
-            <span class="input-group">
-            <?php
-            $option->widget($name, $settings->get($name));
-            ?>
-            </span>
-        </label>
+        <h2>Settings</h2>
+        <hr>
+    </div>
+<div id="settings">
+    <div class="form wrap">
+        <form method="post">
+            <div class="settings">
+                <?php wp_nonce_field(NONCE_ACTION, NONCE_NAME); ?>
 
-        <?php
-        if ($option->helptext) {
-        ?>
-        <div class="helptext">
-            <p class="description"><?php echo esc_html($option->helptext); ?></p>
+                <?php
+                foreach ($settings->options as $name => $option) {
+                    if (!$option->type) continue;
+                ?>
+                <div class="container">
+                    <label>
+                        <span class="label"><?php echo esc_html($option->display_name); ?></span>
+                        <span class="input-group">
+                        <?php
+                        $option->widget($name, $settings->get($name));
+                        ?>
+                        </span>
+                    </label>
+
+                    <?php
+                    if ($option->helptext) {
+                    ?>
+                    <div class="helptext">
+                        <p class="description"><?php echo esc_html($option->helptext); ?></p>
+                    </div>
+                    <?php
+                    }
+                    ?>
+                </div>
+                <?php
+                }
+                ?>
+                <div class="submit">
+                    <input type="submit"
+                        name="submit"
+                        id="submit"
+                        class="button button-primary"
+                        value="Save Changes">
+                    <input type="submit"
+                        name="reset"
+                        id="reset"
+                        class="button button-secondary"
+                        value="Reset to Defaults">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="instructions wrap">
+        <div class="card">
+            <h2 class="title">1. Create your Skipperblogs account</h2>
+            <p>
+                This plugins work in combination with an active Skipperblogs account. If you don't have one, register here <a href="https://www.skipperblogs.com/register?source=wp" target="_blank">https://www.skipperblogs.com/register</a>
+            </p>
         </div>
-        <?php
-        }
-        ?>
+        <div class="card">
+            <h2 class="title">2. Initialize navigation and trackings</h2>
+            <p>
+                Once registered, you will need to <a href="https://www.skipperblogs.com/dashboard/map-editor?source=wp" target="_blank">initalize the navigation </a> and <a target="_blank" href="https://www.skipperblogs.com/dashboard/nav/tracking?source=wp">enable some trackings</a>.         </p>
+        </div>
+        <div class="card">
+            <h2 class="title">3. Add the shortcode on your Wordpress site</h2>
+            <p>
+                Copy our Map ID from the Skipperblogs' dashboard <a href="https://www.skipperblogs.com/dashboard/nav/map/share?source=wp" target="_blank">map share settings</a> in the plugin configuration below.<br>
+                Add the following shortcode in your Wordpress content where you want to display the map. <br>
+                <code>[live-map]</code>
+            </p>
+        </div>
+        <div class="card">
+            <h2 class="title">4. Map customization</h2>
+            <p>
+                Customize the map background, boat icon, track color and style directly from your Skipperblogs account in the  <a href="https://www.skipperblogs.com/dashboard/map-editor?source=wp" target="_blank">map editor</a>
+            </p>
+            <p>
+                To change the map dimension on Wordpress, use the following shortcode parameters<br>
+                <code>[live-map height="250" width="100%"]</code>
+            </p>
+        </div>
     </div>
-    <?php
-    }
-    ?>
-    <div class="submit">
-        <input type="submit" 
-            name="submit" 
-            id="submit" 
-            class="button button-primary" 
-            value="Save Changes">
-        <input type="submit" 
-            name="reset" 
-            id="reset" 
-            class="button button-secondary" 
-            value="Reset to Defaults">
-    </div>
-
-    </div>
-    </form>
 </div>
