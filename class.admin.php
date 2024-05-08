@@ -48,7 +48,7 @@ class BOAT_TRACKING_Admin
     {
         add_action('admin_init', array($this, 'admin_init'));
         add_action('admin_menu', array($this, 'admin_menu'));
-        add_action('admin_enqueue_scripts', array('Boat_Tracking', 'enqueue_and_register'));
+       // add_action('admin_enqueue_scripts', array('Boat_Tracking', 'enqueue_and_register'));
 
         /* add settings to plugin page */
         add_filter('plugin_action_links_' . plugin_basename(BOAT_TRACKING__PLUGIN_FILE), array($this, 'plugin_action_links'));

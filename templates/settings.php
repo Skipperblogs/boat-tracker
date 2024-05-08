@@ -71,9 +71,20 @@ if (isset($_POST['submit']) && verify_nonce() && check_admin_referer(NONCE_ACTIO
 <?php
 }
 /** END FORM SUBMISSION */
-?>
 
-<p><?php echo esc_html($description); ?></p>
+?>
+<div class="settings-header">
+    <div class="left">
+    <p>
+        This plugin allow you to gather the position of your boat through skipperblogs.com and display it on a interactive map on your website.<br>
+        You can track your boat with AIS, Iridium Go, Mobile App, SPOT, Garmin InReahc and many other technologies. <br>
+        Just check out <a href="https://www.skipperblogs.com/features" target="_blank">https://www.skipperblogs.com/features</a> .
+    </p>
+    </div>
+    <div class="right">
+        <img src="<?php echo plugin_dir_url( __DIR__ ) . 'assets/settings-header.jpg' ; ?>" />
+    </div>
+</div>
 <h3>Found an issue?</h3>
 <p>Send an email to<b>: <a href="mailto:support@skipperblogs.com" target="_blank">support@skipperblogs.com</a></p>
     <div class="container">
@@ -130,7 +141,7 @@ if (isset($_POST['submit']) && verify_nonce() && check_admin_referer(NONCE_ACTIO
     </div>
     <div class="instructions wrap">
         <div class="card">
-            <h2 class="title">1. Create your Skipperblogs account</h2>
+            <h2 class="title">1. Create your Skipperblogs account. It's Free !</h2>
             <p>
                 This plugins work in combination with an active Skipperblogs account. If you don't have one, register here <a href="https://www.skipperblogs.com/register?source=wp" target="_blank">https://www.skipperblogs.com/register</a>
             </p>
@@ -141,9 +152,14 @@ if (isset($_POST['submit']) && verify_nonce() && check_admin_referer(NONCE_ACTIO
                 Once registered, you will need to <a href="https://www.skipperblogs.com/dashboard/map-editor?source=wp" target="_blank">initalize the navigation </a> and <a target="_blank" href="https://www.skipperblogs.com/dashboard/nav/tracking?source=wp">enable some trackings</a>.         </p>
         </div>
         <div class="card">
-            <h2 class="title">3. Add the shortcode on your Wordpress site</h2>
+            <h2 class="title">3. Copy your Map ID</h2>
             <p>
-                Copy our Map ID from the Skipperblogs' dashboard <a href="https://www.skipperblogs.com/dashboard/nav/map/share?source=wp" target="_blank">map share settings</a> in the plugin configuration below.<br>
+                Copy our Map ID from the Skipperblogs' dashboard <a href="https://www.skipperblogs.com/dashboard/nav/map/share?source=wp" target="_blank">map share settings</a> in this plugin settings.<br>
+            </p>
+        </div>
+        <div class="card">
+            <h2 class="title">3. Add the map to your website</h2>
+            <p>
                 Add the following shortcode in your Wordpress content where you want to display the map. <br>
                 <code>[live-map]</code>
             </p>

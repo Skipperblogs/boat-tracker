@@ -80,18 +80,31 @@ code {
 input{
   line-height: 1!important;
 }
-#settings{
+#settings,.settings-header{
   display: flex;
   flex-direction: row;
 }
-#settings .form, #settings .instructions{
+#settings .form, #settings .instructions,.settings-header .left,.settings-header .right{
   width: 50%;
 }
+.settings-header img{
+  width: 100%;
+  box-shadow: 3px 3px 20px #0000003d;
+  max-width: 650px;
+  margin: auto;
+}
+.settings-header .right {
+  display: flex;
+}
+.settings-header .left p{
+  font-size: 1.2rem;
+  padding-right: 10px;
+}
 @media screen and (max-width: 990px) {
-  #settings{
+  #settings,.settings-header{
     flex-direction: column;
   }
-  #settings .form, #settings .instructions{
+  #settings .form, #settings .instructions,.settings-header .left,.settings-header .right{
     width: 100%;
   }
 }

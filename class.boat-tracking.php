@@ -120,6 +120,7 @@ class Boat_Tracking
         load_plugin_textdomain( 'boat-tracking', false, dirname( plugin_basename( BOAT_TRACKING__PLUGIN_FILE ) ) . '/languages/' );
     }
 
+
     /**
      * Filter for removing nulls from array
      *
