@@ -1,14 +1,15 @@
-# Boat Tracking WordPress Plugin
+# Boat Tracker WordPress Plugin
 
 ![Header Image](https://ps.w.org/leaflet-map/assets/banner-1544x500.png?rev=1693083)
 
-Add a live map generated with [Skipperblogs](https://www.skipperblogs.com/) for tracking your boat with marine technologies such as Iridium Go, AIS, Garmin InReach, SPOT, YB Tracking. Includes statistics about your voyage like total distance sailed, average speed, top speed, etc.
+Track your boat with AIS, Iridium, Garmin InReach SPOT, E-mail and embed a live map on your website with [Skipperblogs.com](https://www.skipperblogs.com/?source=wp).
+Your position will be live updated with custom messages and weather. Map statistics shows the total distance sailed, average speed etc... as well as visited countries.
 
 ![Map Screenshot](https://i.imgur.com/2XOMUTo.jpeg)
 
 ## Table of Contents
 
-- [Boat Tracking WordPress Plugin](#boat-tracking-wordpress-plugin)
+- [Boat Tracking WordPress Plugin](#boat-tracker-wordpress-plugin)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [General Usage](#general-usage)
@@ -43,7 +44,7 @@ This plugin requires an account by Skipperblogs
 
 ## Customizing the map
 
-You can change the track color and style, the map background, the boat icon and the statistics from the Skipperblogs' [map editor](https://www.skipperblogs.com/dashboard/map-editor).
+You can change the track color and style, the map background, the boat icon and the statistics from the Skipperblogs' [map editor](https://$www.skipperblogs.com/dashboard/map-editor?source=wp).
 
 
 That's all for now! Thanks!
@@ -60,7 +61,7 @@ Yes, in you can hide the Skipperblogs logo in the mapshare settings https://www.
 
 ## Terms of use
 
-There are no terms of use for this plugin, however when registering by Skipperblogs and using its services, you agree to our [Terms of use](https://www.skipperblogs.com/terms), [Privacy policy](https://www.skipperblogs.com/terms/privacy) and [user guidelines](https://www.skipperblogs.com/terms/user-guidelines).
+There are no terms of use for this plugin, however when registering by Skipperblogs and using its services, you agree to our [Terms of use](https://www.skipperblogs.com/terms?source=wp), [Privacy policy](https://www.skipperblogs.com/terms/privacy?source=wp) and [user guidelines](https://www.skipperblogs.com/terms/user-guidelines?source=wp).
 
 ## Licence
 

@@ -9,7 +9,7 @@
  */
 
 $title = $plugin_data['Name'];
-$description = __('A plugin for adding live tracking map from Skipperblogs.com.', 'boat-tracking');
+$description = __('A plugin for adding live tracking map from Skipperblogs.com.', 'boat-tracker');
 $version = $plugin_data['Version'];
 ?>
 <div class="wrap">
@@ -20,8 +20,8 @@ $version = $plugin_data['Version'];
 /** START FORM SUBMISSION */
 
 // validate nonce!
-define('NONCE_NAME', 'boat-tracking-nonce');
-define('NONCE_ACTION', 'boat-tracking-action');
+define('NONCE_NAME', 'boat-tracker-nonce');
+define('NONCE_ACTION', 'boat-tracker-action');
 
 function verify_nonce () {
     $verified = (
@@ -76,9 +76,9 @@ if (isset($_POST['submit']) && verify_nonce() && check_admin_referer(NONCE_ACTIO
 <div class="settings-header">
     <div class="left">
     <p>
-        This plugin allow you to gather the position of your boat through skipperblogs.com and display it on a interactive map on your website.<br>
-        You can track your boat with AIS, Iridium Go, Mobile App, SPOT, Garmin InReahc and many other technologies. <br>
-        Just check out <a href="https://www.skipperblogs.com/features" target="_blank">https://www.skipperblogs.com/features</a> .
+        Track your boat around the world with Skipperblogs.com and display an interactive map on your website.
+        Use AIS, Iridium, our mobile app, Garmin InReach, SPOT, E-mail and other to live report...
+        Just check out <a href="https://www.skipperblogs.com/features?source=wp" target="_blank">https://www.skipperblogs.com/features</a> .
     </p>
     </div>
     <div class="right">

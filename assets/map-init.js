@@ -19,7 +19,7 @@ waitForJquery(async function () {
 
     try {
 
-        var data = await $.get('https://www.skipperblogs.local/share/map/wordpress/'+map_id+'.json');
+        var data = await $.get('https://www.skipperblogs.com/share/map/wordpress/'+map_id+'.json');
 
         if(data.url === undefined || !data.url){
 

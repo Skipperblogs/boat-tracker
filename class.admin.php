@@ -73,15 +73,15 @@ class BOAT_TRACKING_Admin
         $author = "edit_posts";
 
         if (current_user_can($admin)) {
-            $main_link = 'boat-tracking';
+            $main_link = 'boat-tracker';
             $main_page = array($this, "settings_page");
         } else {
             $main_link = 'leaflet-shortcode-helper';
             $main_page = array($this, "shortcode_page");
         }
 
-        add_menu_page("Boat Tracking", "Boat Tracking", $author, $main_link, $main_page, $leaf);
-        add_submenu_page("boat-tracking", __('Settings', 'boat-tracking'), __('Settings', 'boat-tracking'), $admin, "boat-tracking", array($this, "settings_page"));
+        add_menu_page("Boat Tracker", "Boat Tracking", $author, $main_link, $main_page, $leaf);
+        add_submenu_page("boat-tracker", __('Settings', 'boat-tracker'), __('Settings', 'boat-tracker'), $admin, "boat-tracker", array($this, "settings_page"));
     }
 
     /**
@@ -103,7 +103,7 @@ class BOAT_TRACKING_Admin
      */
     public function plugin_action_links($links)
     {
-        $links[] = '<a href="'. esc_url( get_admin_url(null, 'admin.php?page=boat-tracking') ) .'">Settings</a>';
+        $links[] = '<a href="'. esc_url( get_admin_url(null, 'admin.php?page=boat-tracker') ) .'">Settings</a>';
         return $links;
     }
 }

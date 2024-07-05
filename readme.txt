@@ -1,9 +1,9 @@
 === Boat Tracking ===
 Author: skipperblgs
 Author URI: https://www.skipperblogs.com
-Plugin URI: https://wordpress.org/plugins/boat-tracking/
+Plugin URI: https://wordpress.org/plugins/boat-tracker/
 Contributors: skipperblgs
-Tags: boat, tracking, map
+Tags: boat, tracking, map, vessel
 Requires at least: 4.6
 Tested up to: 6.5.2
 Version: 1.0.0
@@ -16,8 +16,9 @@ Interactive live map with boat tracking. 150 words here
 
 == Description ==
 
-Add a map generated with [Skipperblogs](https://www.skipperblogs.com/) for tracking your boat with marine technologies such as Iridium Go, AIS, Garmin InReach, SPOT, YB Tracking. Includes statistics about your voyage like total distance sailed, average speed, top speed, etc.
-In order to work, this plugin requires a registration on [Skipperblogs](https://www.skipperblogs.com/register)
+Track your boat with AIS, Iridium, Garmin InReach SPOT, E-mail and embed a live map on your website with [Skipperblogs.com](https://www.skipperblogs.com/?source=wp).
+Your position will be live updated with custom messages and weather. Map statistics shows the total distance sailed, average speed etc... as well as visited countries.
+In order to work, this plugin requires a registration on [Skipperblogs](https://www.skipperblogs.com/register?source=wp)
 You can use the plugin with a free Skipperblogs account. To enjoy automatic tracking a paid plan is required.
 
 Update every hour or less !
@@ -26,34 +27,51 @@ Update every hour or less !
 
 Simply display the **map** with:
 
-`[boat-tracking]`
+`[boat-tracker]`
 
 Personalize its dimensions:
 
 `[live-map height="300" width="100%"]`
 
-= More =
+= TRACK YOUR BOAT ON THE SEVEN SEAS WITH SKIPPERBLOGS: =
 
-Personalize map background, track color and style, boat icon and statistics from the Skipperblogs' dashboard [https://www.skipperblogs.com/dashboard](https://www.skipperblogs.com/dashboard)
+* ** Interactive map
+* ** Customize map background, boat icon and tracks
+* ** Tracks editor to freely
+* ** Automatic tracking (PREMIUM FEATURE):** your position is automatically updated via AIS, Iridium Go, InReach
+* ** Automatic tracking (PREMIUM FEATURE):** your position is automatically updated via AIS, Iridium Go, InReach
+
+
+Unlock PREMIUM or PRO features with [Webba Booking PRO](https://www.skipperblogs.com/pricing/?source=wp).
+
+Explore the full list of [Webba Booking features](https://www.skipperblogs.com/features/?source=wp).
+
+== OUR CUSTOMERS LOVE US!==
+
+We are proud to have near perfect 5/5 score on Trustpilot:
+
+*“The customer service for this **plugin is phenomenal!**
+The customer service for this plugin is absolutely second-to-none. I'm blown away by how good they are!”* - R.Tyrrell
+
+*“Webba support is nothing like what you have experienced in your earlier life and everything you are hoping to have with a product. The response times, the professionalism, the friendliness... you name it, they have it. **Easiest seven star review I have given!**”* - Webba Customer
+
+*“This plugin is awesome and it can accomplish anything your business needs! OMG the support is NUMBER 1!!!! I will refer this plugin to everyone and let them know **the support is just awesome**. I am very pleased with everything!”* - jbiento
 
 == Installation ==
 
 1. Choose to add a new plugin, then click upload
-2. Upload the boat-tracking zip
+2. Upload the boat-tracker zip
 3. Activate the plugin through the 'Plugins' menu in WordPress
-4. Use the shortcodes in your pages or posts with `[boat-tracking]`
+4. Use the shortcodes in your pages or posts with `[boat-tracker]`
 
 == Frequently Asked Questions ==
 
-= Can I have an SVG Marker? =
+**Is there a free version?**
+Yes, abselutely! you can create a [free account here](https://www.skipperblogs.com/register?source=wp), setup your tracking map and embed it on your Wordpress site. Premium .... is for automatic tracking.
 
-Yes! Convert the default marker into an svg with a shortcode like this: `[leaflet-marker svg color="white" iconClass="fab fa-wordpress-simple" background="red"]` The `iconClass` is perfect for adding a [font-awesome](https://fontawesome.com/icons?d=gallery) icon.
+**Do you provide support?**
 
-= How do I change the style for lines/geojson? =
-
-Pass the style attributes to the respective shortcodes (see all options on [LeafletJS](http://leafletjs.com/reference-1.0.3.html#path)):
-
-`[leaflet-line color="red" weight=10 dasharray="2,15" addresses="Halifax, NS; Tanzania" classname=marching-ants]`
+Yes! Just use the contact form at [here ](https://www.skipperblogs.com/contact?source=wp)
 
 = Can I add geojson? =
 
@@ -65,7 +83,7 @@ Sure!? Use the same attributes as leaflet-geojson (above), but use the `[leaflet
 
 = Can I add wms? =
 
-Sure. Use the same attributes as boat-tracking, but use the `[leaflet-wms]` shortcode; attributes include: `src`, `layer`, and `crs`.
+Sure. Use the same attributes as boat-tracker, but use the `[leaflet-wms]` shortcode; attributes include: `src`, `layer`, and `crs`.
 
 = Can I add a message to a marker? =
 
@@ -85,22 +103,12 @@ Use the marker format `[leaflet-marker]Click here![/leaflet-marker]` and add a h
 
 = I need more functions!
 
-Take a look at the functions of [Extensions for Boat Tracking](https://wordpress.org/plugins/extensions-boat-tracking/).
+Take a look at the functions of [Extensions for Boat Tracking](https://wordpress.org/plugins/extensions-boat-tracker/).
 
 = Additional questions? =
 
-For more FAQs, please visit the [FAQ section on GitHub here](https://github.com/bozdoz/wp-plugin-boat-tracking#frequently-asked-questions).
+For more FAQs, please visit the [FAQ section on GitHub here](https://github.com/bozdoz/wp-plugin-boat-tracker#frequently-asked-questions).
 
-== Screenshots ==
-
-1. Put the shortcode into the post.
-2. See the shortcode play out on the front end.
-3. For `[leaflet-image]` upload an image, and copy the URL from the right-hand side
-4. For `[leaflet-image]` paste that image URL into an attribute titled `source`: example: `src="https://picsum.photos/1000/1000/"`.
-5. See the `[leaflet-image]` on the front end.
-6. If you use `[leaflet-marker draggable]`, then you can drag the marker where you want it, open a developers console, and see the specific shortcode to use.
-7. Add geojson via URL: `[leaflet-geojson src="https://example.com/path/to.geojson"]`
-8. MapQuest requires an app key, get it from their website; alternatively, you can use OpenStreetMap as a free tile service (remember to add an attribution where necessary).
 
 
 == Screenshots ==

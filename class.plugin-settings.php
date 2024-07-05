@@ -71,10 +71,10 @@ class BOAT_TRACKING_Plugin_Settings
 
         $this->options = array(
             'sb_map_id' => array(
-                'display_name'=>__('Map ID', 'boat-tracking'),
+                'display_name'=>__('Map ID', 'boat-tracker'),
                 'default'=>'',
                 'type' => 'text',
-                'helptext' => __('You can retreive your Map ID from https://www.skipperblogs.com/dashboard/nav/map/share?source=wp', 'boat-tracking')
+                'helptext' => __('You can retreive your Map ID from https://www.skipperblogs.com/dashboard/nav/map/share', 'boat-tracker')
             ),
 
         );
