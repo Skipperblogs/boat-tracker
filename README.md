@@ -1,6 +1,6 @@
 # Boat Tracker WordPress Plugin
 
-![Header Image](https://ps.w.org/leaflet-map/assets/banner-1544x500.png?rev=1693083)
+![Header Image](https://ps.w.org/boat-tracker/assets/banner-1544x500.png?rev=1693083)
 
 Track your boat with AIS, Iridium, Garmin InReach SPOT, E-mail and embed a live map on your website with [Skipperblogs.com](https://www.skipperblogs.com/?source=wp).
 Your position will be live updated with custom messages and weather. Map statistics shows the total distance sailed, average speed etc... as well as visited countries.
