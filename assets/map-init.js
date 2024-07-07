@@ -8,20 +8,19 @@ function waitForJquery(callback){
 
 waitForJquery(async function () {
 
-    var map_wrapper = $('#map-warpper');
+    var map_wrapper = $('#map-wrapper');
     var map_element = $('#map');
-    var map_id =  $('#map-warpper').data('map-id');
+    var map_id =  $('#map-wrapper').data('map-id');
 
     function mapAlert(text){
-        map_element.append($('<p></p>').text(text));
-
+        map_element.append($('<p></p>').text(text)).css({'text-align':'center'});
     }
 
     try {
 
         var data = await $.get('https://www.skipperblogs.com/share/map/wordpress/'+map_id+'.json');
 
-        if(data.url === undefined || !data.url){
+        if(typeof data.url === "undefined" || data.url.length < 1){
 
             mapAlert('Could not fetch map live data. Please check your MAP ID in the plugin settings.');
             return;
@@ -36,8 +35,7 @@ waitForJquery(async function () {
 
         Object.keys(data.map_attr).forEach(function (key) {
             map_element.attr(key,data.map_attr[key]);
-        });
-
+        });$
         if(data.is_windy && data.map_attr['data-key'] === undefined){
             mapAlert('No Windy API key present. To display Windy weather map, you must create a Windy Api key on https://api.windy.com and paste your key in skipperblogs\' map configuration.');
             return;
@@ -56,7 +54,7 @@ waitForJquery(async function () {
         }
 
         if(data.display_support){
-            map_wrapper.append('<div class="sb-logo"><a target="_blank" title="Powered by Skipperblogs" href="https://www.skipperblogs.com?source=ribbon"><img src="https://www.skipperblogs.com/assets/img/logo.svg"><span></span></a></div>');
+            map_wrapper.append('<div class="sb-logo"><a target="_blank" href="https://www.skipperblogs.com?source=wp"><img src="https://www.skipperblogs.com/assets/img/logo.svg"><span></span></a></div>');
         }
         if(data.stats.display_stats){
 
@@ -64,7 +62,7 @@ waitForJquery(async function () {
 
             if(data.stats.display_last_update) map_stats.append('<div class="info-last-update">'+sblang.map_last_update+' <span>---</span></div>');
             if(data.stats.display_last_position) map_stats.append('<div class="info-last-pos"'+sblang.map_last_postition+' <span>---</span></div>');
-            if(data.stats.display_distance) map_stats.append('<div class="info-total-distance">'+sblang.map_total_distance+' <span>---</span></div>');
+            if(data.stats.display_distance) map_stats.append('<div class="info-total-distance">'+sblang.map_total_distance+' <span>---</span> NM</div>');
             if(data.stats.display_avg_speed) map_stats.append('<div class="info-avg-speed">'+sblang.map_avg_speed+' <span>---</span></div>');
             if(data.stats.display_top_speed) map_stats.append('<div class="info-max-speed">'+sblang.map_max_speed+' <span>---</span></div>');
             if(data.stats.display_pace) map_stats.append('<div class="info-pace-day">'+sblang.map_pace+' <span>---</span></div>');
@@ -72,6 +70,7 @@ waitForJquery(async function () {
             if(data.is_windy)map_stats.append('<div class="attributions" style="text-align: right">'+(data.is_windy ? '<a href="https://www.windy.com"><img width="80" class="clickable-size" alt="Windy.com" src="https://www.windy.com/img/logo201802/logo-full-windycom-white.svg"></a>':'')+'</div>')
         }
     }catch (e) {
+
         mapAlert('Could not fetch map live data. Please check your MAP ID in the plugin settings.');
         return;
     }

@@ -74,7 +74,7 @@ class BOAT_TRACKING_Plugin_Settings
                 'display_name'=>__('Map ID', 'boat-tracker'),
                 'default'=>'',
                 'type' => 'text',
-                'helptext' => __('You can retreive your Map ID from https://www.skipperblogs.com/dashboard/nav/map/share', 'boat-tracker')
+                'helptext' => __('Retreive your Map ID from <a href="https://www.skipperblogs.com/dashboard/nav/map/share">https://www.skipperblogs.com/dashboard/nav/map/share</a>', 'boat-tracker')
             ),
 
         );

@@ -1,9 +1,8 @@
 <?php
 
 /**
- * Plugin Name: Boat Tracking with Skipperblogs
- * Plugin URI: https://wordpress.org/plugins/boat-tracker/
- * Description: A plugin for embeeding live tracking map from Skipperblogs.com. Track your boat across all ocean with Iridium Go, AIS, InReach, SPOT, Startlink, SSB radio, and display all your voyage on your website.
+ * Plugin Name: Boat Tracker
+ * Description: Track your boat around the globe with Iridium, AIS, InReach, PredictWind, SPOT, Startlink, etc, and display an interactive map on your website.
  * Author: Skipperblogs
  * Author URI: https://www.skipperblogs.com/
  * Text Domain: boat-tracker

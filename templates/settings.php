@@ -82,7 +82,7 @@ if (isset($_POST['submit']) && verify_nonce() && check_admin_referer(NONCE_ACTIO
     </p>
     </div>
     <div class="right">
-        <img src="<?php echo plugin_dir_url( __DIR__ ) . 'assets/settings-header.jpg' ; ?>" />
+        <img src="<?php echo esc_html(plugin_dir_url( __DIR__ ) . 'assets/settings-header.jpg') ; ?>" />
     </div>
 </div>
 <h3>Found an issue?</h3>
@@ -140,28 +140,26 @@ if (isset($_POST['submit']) && verify_nonce() && check_admin_referer(NONCE_ACTIO
         </form>
     </div>
     <div class="instructions wrap">
+        <h1>Installation steps</h1>
         <div class="card">
-            <h2 class="title">1. Create your Skipperblogs account. It's Free !</h2>
+            <h2 class="title">1. Create your Skipperblogs account.</h2>
             <p>
-                This plugins work in combination with an active Skipperblogs account. If you don't have one, register here <a href="https://www.skipperblogs.com/register?source=wp" target="_blank">https://www.skipperblogs.com/register</a>
+                This plugins work in combination with an active Skipperblogs account. If you don't have one, register here <a href="https://www.skipperblogs.com/register?source=wp" target="_blank">https://www.skipperblogs.com/register</a>  It's Free !
+                <br>
+                Once registered, you can <a target="_blank" href="https://www.skipperblogs.com/dashboard/nav/tracking">enable the tracking</a>.
             </p>
         </div>
         <div class="card">
-            <h2 class="title">2. Initialize navigation and trackings</h2>
+            <h2 class="title">2. Copy your Map ID</h2>
             <p>
-                Once registered, you will need to <a href="https://www.skipperblogs.com/dashboard/map-editor?source=wp" target="_blank">initalize the navigation </a> and <a target="_blank" href="https://www.skipperblogs.com/dashboard/nav/tracking?source=wp">enable some trackings</a>.         </p>
-        </div>
-        <div class="card">
-            <h2 class="title">3. Copy your Map ID</h2>
-            <p>
-                Copy our Map ID from the Skipperblogs' dashboard <a href="https://www.skipperblogs.com/dashboard/nav/map/share?source=wp" target="_blank">map share settings</a> in this plugin settings.<br>
+                Copy our Map ID from the Skipperblogs' dashboard <a href="https://www.skipperblogs.com/dashboard/nav/map/share?source=wp" target="_blank">map share</a> and paste it in this settings page.<br>
             </p>
         </div>
         <div class="card">
-            <h2 class="title">3. Add the map to your website</h2>
+            <h2 class="title">3. Add the map in your content</h2>
             <p>
                 Add the following shortcode in your Wordpress content where you want to display the map. <br>
-                <code>[live-map]</code>
+                <code>[boat-tracker]</code>
             </p>
         </div>
         <div class="card">
@@ -171,7 +169,7 @@ if (isset($_POST['submit']) && verify_nonce() && check_admin_referer(NONCE_ACTIO
             </p>
             <p>
                 To change the map dimension on Wordpress, use the following shortcode parameters<br>
-                <code>[live-map height="250" width="100%"]</code>
+                <code>[boat-tracker height="250" width="100%"]</code>
             </p>
         </div>
     </div>

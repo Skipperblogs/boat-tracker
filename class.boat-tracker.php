@@ -60,7 +60,7 @@ class Boat_Tracking
             $settings  = BOAT_TRACKING_Plugin_Settings::init();
 
             if(strlen($settings->get('sb_map_id')) > 10)
-                $html = '<div class="boat-tracker skipperblogs-wp" data-map-id="'.esc_html($settings->get('sb_map_id')).'" id="map-warpper" style="height:'.htmlspecialchars($atts['height']).'; width:'.htmlspecialchars($atts['width']).'"><div id="map"></div></div>';
+                $html = '<div class="boat-tracker skipperblogs-wp" data-map-id="'.esc_html($settings->get('sb_map_id')).'" id="map-wrapper" style="height:'.htmlspecialchars($atts['height']).'; width:'.htmlspecialchars($atts['width']).'"><div id="map"></div></div>';
             else
                 $html = '<p><i>The map cannot be loaded without map ID. Check your settings.</i></p>';
             return $html;
@@ -68,7 +68,7 @@ class Boat_Tracking
 
 
 
-        add_shortcode('live-map','mapShortCode');
+        add_shortcode('boat-tracker','mapShortCode');
     }
 
     /**

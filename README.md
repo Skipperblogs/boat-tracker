@@ -1,63 +1,100 @@
 # Boat Tracker WordPress Plugin
 
-![Header Image](https://ps.w.org/leaflet-map/assets/banner-1544x500.png?rev=1693083)
+![Header Image](https://ps.w.org/boat-tracker/assets/banner-1544x500.png?rev=1693083)
 
-Track your boat with AIS, Iridium, Garmin InReach SPOT, E-mail and embed a live map on your website with [Skipperblogs.com](https://www.skipperblogs.com/?source=wp).
-Your position will be live updated with custom messages and weather. Map statistics shows the total distance sailed, average speed etc... as well as visited countries.
+Track your boat with AIS, Iridium, Garmin InReach SPOT, E-mail and embed a live map on your website with this [Skipperblogs](https://www.skipperblogs.com/?source=wp) Wordpress plugin.
+Your position will be live updated anywhere in the world with custom messages and weather. Map statistics shows the total distance sailed, average speed etc... as well as visited countries.
+Perfect for a travel website to highlight your sailing achievements.
+
+While the free version of Skipperblogs allows you to create a map, import GPX files, and edit your track with a powerful editor, the Premium version allow you to automatically update your position through marine trackers like AIS, Iridium etc.
+
+In order to display the map your must create a free account on [Skipperblogs](https://www.skipperblogs.com/register?source=wp)
+
 
 ![Map Screenshot](https://i.imgur.com/2XOMUTo.jpeg)
 
-## Table of Contents
+## Adding the map
 
-- [Boat Tracking WordPress Plugin](#boat-tracker-wordpress-plugin)
-  - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-  - [General Usage](#general-usage)
-  - [Setting up your account](#general-usage)
-  - [Frequently Asked Questions](#frequently-asked-questions)
-
-## Installation
-
-- Install via the WordPress plugins page on your WordPress site: `/wp-admin/plugin-install.php` (search "Boat tracking")
-
-## General Usage
+Simply display the **map** in your content with the shortcode:
 
 ```
-[live-map]
+[boat-tracker]
 ```
 
-The above shortcode will produce a map centered on the last position of your boat.
-
+The above shortcode will display a map centered on the last position of your boat.
 To customize the map dimension add the following attributes to the short code 
 
 ```
-[live-map heigth="300" width="100%"]
+[boat-tracker heigth="300" width="100%"]
 ```
 
-## Setting up your account and trackings
+## Personalize the map
 
-This plugin requires an account by Skipperblogs
+Log-in to your Skipperblogs' account and open the map editor under Dashboard > Navigation > Map
+There you can change your boat icon, track style, map background and many more.
 
-1. Register at https://www.skipperblogs.com/register
-2. Initialize the map https://www.skipperblogs.com/dashboard/map-editor
-3. Setup individual trackings https://www.skipperblogs.com/dashboard/nav/trackings
+## Free version
 
-## Customizing the map
+* Interactive map
+* Manual tracking
+* Customize map background and traces
+* Track editor to freely edit your trace
+* Import GPS trace from GPX files, PredictWind, Saiblogs, FollowingSea, Farkwar
+* And more
 
-You can change the track color and style, the map background, the boat icon and the statistics from the Skipperblogs' [map editor](https://$www.skipperblogs.com/dashboard/map-editor?source=wp).
+Explore the full list of [Skipperblogs features](https://www.skipperblogs.com/features/?source=wp).
 
+## Premium & Pro version
 
-That's all for now! Thanks!
+* Automatic tracking
+    * AIS
+    * Iridium
+    * Mobile App
+    * Garmin InReach
+    * SPOT
+    * Telegram
+    * Skymate
+    * SSB radio
+    * E-mail
+    * API
+* Windy Weather map
+* Custom boat icon
+* Automatic visited countries
+* And more
+
+Unlock advanced features with [Skipperblogs Premium or Pro](https://www.skipperblogs.com/pricing/?source=wp).
+
+## Installation
+
+1. Choose to add a new plugin, then click upload
+2. Upload the boat-tracker zip file
+3. Activate the plugin through the 'Plugins' menu in WordPress
+4. Create a Skipperblogs account
+5. Retrieve your Map ID on [https://www.skipperblogs.com/dashboard/nav/map/share](https://www.skipperblogs.com/dashboard/nav/map/share) and paste it in the Wordpress plugin configuration
+6. Use the shortcode `[boat-tracker]` in your pages or posts to display the live map
 
 ## Frequently Asked Questions
 
-### Can I use the live map and the plugin with a free account?
+#### Is there a free version?
+Yes, absolutely! you can create a [free account here](https://www.skipperblogs.com/register?source=wp), setup your map and embed it on your Wordpress site.
 
-Absolutely. The map can be updated with the map editor Aka manual tracking
+#### Can I add a message to a marker?
 
-### Can I remove the Skipperblogs' logo ?
+Yes, with E-mail and SSB tracking, you can send a message with your position report that will be show on the map marker (speed and heading data are also supported).
+You can also add your message and data with the map editor.
 
-Yes, in you can hide the Skipperblogs logo in the mapshare settings https://www.skipperblogs.com/dashboard/nav/map/share
+#### How do I personalize the map ?
+
+Log in to your Skipperblogs' account and go to [Dashboard > Navigation > Map](https://www.skipperblogs.com/dashboard/map-editor). Click on "Map" tab.
+
+#### Do you provide support?
+
+Yes! Just use the contact form [here ](https://www.skipperblogs.com/contact?source=wp) and you will get assistance by E-mail most of the time within 24h.
+For faster answer to your questions, visit our [support portal](https://www.skipperblogs.com/support?source=wp).
+
+#### Additional questions?
+
+For more FAQs, please visit our [support portal here](https://www.skipperblogs.com/support?source=wp).
 
 ## Terms of use
 
